@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <main>
+    <fieldset>
+      <form name="pessoa" method="post" action="/" onsubmit="return validate()">
+        <section>
+          <label for="nome">Nome</label>
+          <input type="text" name="nome" id="nome" class="" required />
+        </section>
+        <section>
+          <label for="cpf">CPF</label>
+          <input type="text" name="cpf" id="cpf" class="" required />
+        </section>
+        <section>
+          <label for="rg">RG</label>
+          <input type="text" name="rg" id="rg" class="" required />
+        </section>
+        <section>
+          <label for="data_nascimento">Data de Nascimento</label>
+          <input type="text" name="data_nascimento" id="data_nascimento" class="" required />
+        </section>
+        <section>
+          <label for="data_cadastro">Data de Cadastro</label>
+          <input type="text" name="data_nascimento" id="data_cadastro" class="" required />
+        </section>
+        <section>
+          <label for="sexo">Sexo</label>
+          <select name="sexo" id="sexo">
+            <option value="" selected disabled>Selecione</option>
+            <option value="M">Masculino</option>
+            <option value="F">Feminino</option>
+          </select>
+        </section>
+        <section>
+          <label for="reservista">Reservista</label>
+          <input type="text" name="reservista" id="reservista" class="" disabled />
+        </section>
+        <section>
+          <label for="telefone_tipo">Telefone</label>
+          <select name="telefone_tipo" id="telefone_tipo">
+            <option value="" selected disabled>Selecione</option>
+            <option value="fixo">Fixo</option>
+            <option value="celular">Celular</option>
+          </select>
+          <input type="text" name="telefone" id="telefone" class="" />
+        </section>
+        <section>
+          <button type="submit">Enviar</button>
+          <button type="button" onclick="this.form.reset()">Cancelar</button>
+        </section>
+      </form>
+    </fieldset>
+  </main>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery.validate.js" type="text/javascript"></script>
+  <script src="js/jquery.maskedinput-1.1.4.pack.js" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
