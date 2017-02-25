@@ -9,7 +9,7 @@
   <main>
     <fieldset>
       <section class="messages"></section>
-      <form name="pessoa" method="post" action="" onsubmit="return false" class="validate">
+      <form name="pessoa" method="post" action="" onsubmit="return App.validate(this)" class="validate">
         <section>
           <label for="nome">Nome</label>
           <input type="text" name="nome" id="nome" class="core uppercase required" required pattern=".{10,40}" title="de 10 a 40 caracteres" minlength="10" maxlength="40" />
@@ -27,8 +27,8 @@
           <input type="text" name="data_nascimento" id="data_nascimento" class="data required" required />
         </section>
         <section>
-          <label for="data_cadastro">Data de Cadastro</label>
-          <input type="date" name="data_cadastro" id="data_cadastro" class="required" required max="App.config.data_cadastro.max()" min="App.config.data_cadastro.min()" />
+          <label>Data de Cadastro</label>
+          <input type="date" name="data_cadastro" id="data_cadastro" class="required" required />
         </section>
         <section>
           <label for="sexo">Sexo</label>
@@ -50,11 +50,11 @@
             <option value="celular">Celular</option>
           </select>
           <input type="text" name="telefone[]" id="telefone-0" class="fone" />
-          <button type="button" onclick="App.addPhone(this)">Adicionar Telefone</button>
+          <button type="button" onclick="App.addTelefoneFields(this)">Adicionar Telefone</button>
         </section>
         <section>
-          <button type="submit" onclick="App.validate(this.form)">Enviar</button>
-          <button type="button" onclick="this.form.reset()">Cancelar</button>
+          <button type="submit">Enviar</button>
+          <button type="button" onclick="App.reset(this.form)">Cancelar</button>
         </section>
       </form>
     </fieldset>
