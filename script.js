@@ -278,9 +278,16 @@
       $('.invalid').remove();
       $('.messages').hide();
       $('.messages').html('');
+      var total = $('[name^="telefone_tipo"]').length - 1;
+      $.each($('[name^="telefone_tipo"]'), function(index, value) {
+        if(index !== total) {
+          $(this).parent().remove();
+        }
+      });
       form.reset();
       // hiding the reservista field
       $('[name="sexo"]').change();
+      $('[name="nome"]').focus();
     };
 
   };
