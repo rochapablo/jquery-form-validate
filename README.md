@@ -4,4 +4,4 @@
 
 ## Debug
 
-See the debug.jpg file
+See the [debug.jpg](https://github.com/rochapablo/jquery-form-validate/blob/master/debug.jpg) file
