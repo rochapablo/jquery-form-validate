@@ -71,7 +71,8 @@
       data.telefone_tipo.forEach(function(current, index) {
         var val1 = data.telefone[index].value;
         var val2 = data.telefone[index].value;
-        if(val1.length < 1 || val2.length < 1) {
+        var numbers = val2.match(/\d+/g);
+        if(!numbers || numbers.join('').length < 10 || val1.length < 1) {
           error = true;
           return false;
         }
@@ -135,7 +136,7 @@
         // console.clear();
         _this.addRequiredMessageTags();
         _this.onSexoFieldChange();
-        _this.fillForTestPurpose();
+        // _this.fillForTestPurpose();
       });
     };
 
@@ -239,12 +240,16 @@
 
       if(!telefones) {
         $.each($('[name^="telefone_tipo"]'), function(index, value) {
-          if($(this).val().length <= 0 && $(this).next().val().length <= 0) {
+          if($(this).val().length <= 0 || $(this).next().val().length <= 0) {
             $(this).addClass('required invalid');
+            $(this).prop('required', true);
             $(this).next().addClass('required invalid');
+            $(this).next().prop('required', true);
           } else {
             $(this).removeClass('required invalid');
+            $(this).prop('required', false);
             $(this).next().removeClass('required invalid');
+            $(this).next().prop('required', false);
           }
         });
       }
