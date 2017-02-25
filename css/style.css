@@ -1,12 +1,121 @@
-html, body, main, section, p { margin: 0; padding: 0; }
+html, body, main, fieldset, section, p { margin: 0; padding: 0; border: 0; box-sizing: border-box; }
 body { font-family: 'Roboto', sans-serif; font-size: 0.875em; }
+
+main { display: table; margin: 0 auto; }
+main fieldset button, main fieldset input, main fieldset select { padding: 4px 5px; }
+main fieldset button { background-color: #2fa9f6; border: solid 1px #1b8ad0; color: #fff; text-transform: uppercase; }
 
 .core.hide { display: none; }
 .core.uppercase { text-transform: uppercase; }
+.core.field { max-width: 480px; min-width: 480px; width: 480px; margin: 0 0 8px 0; }
+.core.field label {  }
+.core.field input, .core.field select { border: solid 1px #d9d9d9; }
+.core.field p { color: red; }
+.core.field.buttons {  }
 
 .required.invalid { border: solid 1px red; }
+.messages { display: none; background-color: #f64b2f; margin: 0 0 8px 0; border: solid 1px #dd3519; padding: 8px; color: #fff; line-height: 30px; }
 
-.messages {
-  display: none;
-  border: solid 1px red;
+.layout-row {
+  display: flex;
+  flex-direction: row;
+}
+.layout-column {
+  display: flex;
+  flex-direction: column;
+}
+.layout-align.start {
+  /** @TODO: need improve this duplicity **/
+}
+.layout-align.start-start {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.layout-align.start-end {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.layout-align.start-center {
+  justify-content: flex-start;
+  align-items: center;
+}
+.layout-align.start-stretch {
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.layout-align.end {
+  /** @TODO: need improve this duplicity **/
+}
+.layout-align.end-start {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.layout-align.end-end {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.layout-align.end-center {
+  justify-content: flex-end;
+  align-items: center;
+}
+.layout-align.end-stretch {
+  justify-content: flex-end;
+  align-items: stretch;
+}
+.layout-align.center {
+  /** @TODO: need improve this duplicity **/
+}
+.layout-align.center-start {
+  justify-content: center;
+  align-items: flex-start;
+}
+.layout-align.center-end {
+  justify-content: center;
+  align-items: flex-end;
+}
+.layout-align.center-center {
+  justify-content: center;
+  align-items: center;
+}
+.layout-align.center-stretch {
+  justify-content: center;
+  align-items: stretch;
+}
+.layout-align.space-between {
+  /** @TODO: need improve this duplicity **/
+}
+.layout-align.space-between-start {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.layout-align.space-between-end {
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.layout-align.space-between-center {
+  justify-content: space-between;
+  align-items: center;
+}
+.layout-align.space-between-stretch {
+  justify-content: space-between;
+  align-items: stretch;
+}
+.layout-align.space-around {
+  /** @TODO: need improve this duplicity **/
+}
+.layout-align.space-around-start {
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.layout-align.space-around-end {
+  justify-content: space-around;
+  align-items: flex-end;
+}
+.layout-align.space-around-center {
+  justify-content: space-around;
+  align-items: center;
+}
+.layout-align.space-around-stretch {
+  justify-content: space-around;
+  align-items: stretch;
 }
