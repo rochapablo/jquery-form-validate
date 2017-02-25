@@ -5,27 +5,27 @@ $(function() {
     /* Required message */
     var requiredMsg = "Campo Requerido!";    
 	/*Radio Mensagem*/
-	var radioMsg = "Selecione uma opÁ„o!";
+	var radioMsg = "Selecione uma op√ß√£o!";
 	/*Checkbox Mensagem*/
-	var chkMsg = "Marque uma opÁ„o!";
+	var chkMsg = "Marque uma op√ß√£o!";
     /* E-mail message */
-    var mailMsg = "O e-mail informado È inv·lido!";
+    var mailMsg = "O e-mail informado √© inv√°lido!";
     /* CPF message */
-    var cpfMsg = "CPF informado È inv·lido!";
+    var cpfMsg = "CPF informado √© inv√°lido!";
     /* cnpj message */
-    var cnpjMsg = "CNPJ informado È inv·lido!";
+    var cnpjMsg = "CNPJ informado √© inv√°lido!";
     /* Data message */
-    var dataMsg = "Data informada È inv·lida!";    
+    var dataMsg = "Data informada √© inv√°lida!";    
     /* Numeric message */
-    var numericMsg = "O valor deve ser n˙merico!";
+    var numericMsg = "O valor deve ser n√∫merico!";
     /* minlength message */
     var minMsg = "Informe ao menos X caracters!";
     /* maxlength message */
-    var maxMsg = "A quantidade m·xima È de X caracters!";
+    var maxMsg = "A quantidade m√°xima √© de X caracters!";
     /* Password message */
-    var passwordMsg = "Senhas n„o conferem!";
+    var passwordMsg = "Senhas n√£o conferem!";
     /* Telefone message */
-    var foneMsg = "O telefone informado È inv·lido!";    
+    var foneMsg = "O telefone informado √© inv√°lido!";    
     
     
     /* mascaras */
@@ -150,7 +150,7 @@ $(function() {
 				if(cepr.resultado == 0){
 					$(this).removeClass('valid').addClass('invalid');
 					$(this).select();
-					$(this).parent().find('span').html('Cep n„o encontrado, informe um CEP v·lido.').fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
+					$(this).parent().find('span').html('Cep n√£o encontrado, informe um CEP v√°lido.').fadeOut(500).fadeIn(500).fadeOut(500).fadeIn(500);
 					valid = false;
 					return false;								
 				}else{

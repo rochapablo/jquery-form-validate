@@ -1,0 +1,12 @@
+html, body, main, section, p { margin: 0; padding: 0; }
+body { font-family: 'Roboto', sans-serif; font-size: 0.875em; }
+
+.core.hide { display: none; }
+.core.uppercase { text-transform: uppercase; }
+
+.required.invalid { border: solid 1px red; }
+
+.messages {
+  display: none;
+  border: solid 1px red;
+}
